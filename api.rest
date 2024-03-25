@@ -1,0 +1,39 @@
+POST http://localhost:8080/conta
+Content-Type: application/json
+
+{
+    "numero": 123,
+    "agencia": "0789",
+    "nomeTitular": "Joao Carlos Lima",
+    "cpf": "81770673890",
+    "dataDeAbertura": "2024-03-25",
+    "saldo": 10,
+    "tipo": "CORRENTE"
+
+}
+
+### 
+
+GET http://localhost:8080/conta
+
+### 
+
+GET http://localhost:8080/conta/123
+
+### 
+
+GET http://localhost:8080/conta?cpf=81770673890
+
+###
+
+DELETE http://localhost:8080/conta/123
+
+### 
+
+POST http://localhost:8080/conta/123/deposito
+Content-Type: application/json
+
+{
+    "valor": 100,
+}
+
