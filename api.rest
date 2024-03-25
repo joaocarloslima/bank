@@ -12,6 +12,22 @@ Content-Type: application/json
 
 }
 
+###
+
+POST http://localhost:8080/conta
+Content-Type: application/json
+
+{
+    "numero": 456,
+    "agencia": "0789",
+    "nomeTitular": "Maria Santos",
+    "cpf": "14816082824",
+    "dataDeAbertura": "2024-03-25",
+    "saldo": 0,
+    "tipo": "CORRENTE"
+
+}
+
 ### 
 
 GET http://localhost:8080/conta
@@ -34,6 +50,16 @@ POST http://localhost:8080/conta/123/deposito
 Content-Type: application/json
 
 {
+    "valor": 100
+}
+
+### 
+
+POST http://localhost:8080/conta/123/pix
+Content-Type: application/json
+
+{
     "valor": 100,
+    "contaDestino": 456
 }
 
